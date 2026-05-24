@@ -1,0 +1,68 @@
+const matters = [
+  {
+    id: 1,
+    title: "Contract Review",
+    status: "In Progress",
+    priority: "High",
+    assignedTo: "Sarah",
+    dueDate: "2026-05-28",
+  },
+  {
+    id: 2,
+    title: "Client Onboarding",
+    status: "Not Started",
+    priority: "Medium",
+    assignedTo: "James",
+    dueDate: "2026-06-10",
+  },
+  {
+    id: 3,
+    title: "NDA Filing",
+    status: "Done",
+    priority: "Low",
+    assignedTo: "Priya",
+    dueDate: "2026-05-15",
+  },
+  {
+    id: 4,
+    title: "Court Date Preparation",
+    status: "In Progress",
+    priority: "High",
+    assignedTo: "Sarah",
+    dueDate: "2026-06-01",
+  },
+  {
+    id: 5,
+    title: "Lease Agreement Draft",
+    status: "Not Started",
+    priority: "Medium",
+    assignedTo: "Tom",
+    dueDate: "2026-06-20",
+  },
+  {
+    id: 6,
+    title: "Trademark Registration",
+    status: "Done",
+    priority: "High",
+    assignedTo: "Priya",
+    dueDate: "2026-05-10",
+  },
+  {
+    id: 7,
+    title: "Due Diligence Report",
+    status: "In Progress",
+    priority: "Low",
+    assignedTo: "James",
+    dueDate: "2026-06-15",
+  },
+  {
+    id: 8,
+    title: "Settlement Negotiation",
+    status: "Not Started",
+    priority: "High",
+    assignedTo: "Tom",
+    dueDate: "2026-07-01",
+  },
+]
+
+export default matters
