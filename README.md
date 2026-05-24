@@ -86,4 +86,4 @@ matters-dashboard/
 ## If I had more time
 
 I'd add dark mode, some subtle animations when cards filter in and out, and localStorage to remember your filter settings between sessions. I left those out to keep the code clean and focused rather than trying to cram everything in.
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
