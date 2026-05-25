@@ -71,57 +71,66 @@ export default function Home() {
 
         {/* --- Header --- */}
         <div className="mb-8">
-          <h1 className="text-4xl font-meduim font-serifgit  text-gray-900">Matters Dashboard</h1>
+          <h1 className="text-4xl font-meduim font-serif text-gray-900">Matters Dashboard</h1>
           <p className="text-sm text-gray-400 mt-1">
             {matters.length} total matters
           </p>
         </div>
 
-        {/* --- Search, Filter and Sort Controls --- */}
-        <div className="flex flex-col md:flex-row gap-3 mb-6">
-          <input
-            type="text"
-            placeholder="Search by title or person..."
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm flex-1 bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 placeholder:text-gray-500 cursor-text caret-gray-500 text-gray-800"
-          />
+       {/* --- Search, Filter and Sort Controls --- */}
+<div className="flex flex-col md:flex-row gap-3 mb-6">
+  <div className="flex flex-col gap-1 flex-1">
+    <label className="text-xs text-gray-500 font-medium">Search</label>
+    <input
+      type="text"
+      placeholder="Search by title or person..."
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+      className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-blue-200 placeholder:text-gray-500 cursor-text caret-gray-500 text-gray-800"
+    />
+  </div>
 
-          {/* Status filter */}
-          <select
-            value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
-          >
-            <option>All</option>
-            <option>Not Started</option>
-            <option>In Progress</option>
-            <option>Done</option>
-          </select>
+  <div className="flex flex-col gap-1">
+    <label className="text-xs text-gray-500 font-medium">Status</label>
+    <select
+      value={statusFilter}
+      onChange={(e) => setStatusFilter(e.target.value)}
+      className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
+    >
+      <option>All</option>
+      <option>Not Started</option>
+      <option>In Progress</option>
+      <option>Done</option>
+    </select>
+  </div>
 
-          {/* Priority filter */}
-          <select
-            value={priorityFilter}
-            onChange={(e) => setPriorityFilter(e.target.value)}
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
-          >
-            <option>All</option>
-            <option>High</option>
-            <option>Medium</option>
-            <option>Low</option>
-          </select>
+  <div className="flex flex-col gap-1">
+    <label className="text-xs text-gray-500 font-medium">Priority</label>
+    <select
+      value={priorityFilter}
+      onChange={(e) => setPriorityFilter(e.target.value)}
+      className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
+    >
+      <option>All</option>
+      <option>High</option>
+      <option>Medium</option>
+      <option>Low</option>
+    </select>
+  </div>
 
-          {/* Sort */}
-          <select
-            value={sortBy}
-            onChange={(e) => setSortBy(e.target.value)}
-            className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
-          >
-            <option>None</option>
-            <option>Due Date</option>
-            <option>Priority</option>
-          </select>
-        </div>
+  <div className="flex flex-col gap-1">
+    <label className="text-xs text-gray-500 font-medium">Sort By</label>
+    <select
+      value={sortBy}
+      onChange={(e) => setSortBy(e.target.value)}
+      className="border border-gray-200 rounded-lg px-4 py-2 text-sm bg-white text-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-200 cursor-pointer"
+    >
+      <option>None</option>
+      <option>Due Date</option>
+      <option>Priority</option>
+    </select>
+  </div>
+</div>
 
         {/* --- Loading, Empty and Matters States --- */}
         {loading ? (
